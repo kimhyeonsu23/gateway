@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 
 @SpringBootApplication
 public class GatewayApplication {
@@ -28,17 +29,17 @@ public class GatewayApplication {
 	}
 */
 	
-	@Bean
-	public RouteLocator userRoutes(RouteLocatorBuilder builder) {
-		
-		return builder.routes()
-				.route("user_route", p -> p
-						.path("/createUser")
-						//.method(HttpMehod.POST)
-						.uri("http://localhost:8081"))
-				.build();
-		
-	}
+//	@Bean
+//	public RouteLocator userRoutes(RouteLocatorBuilder builder) {
+//		
+//		return builder.routes()
+//				.route("user_route", p -> p
+//						.path("/createUser")
+//						//.method(HttpMethod.POST)
+//						.uri("http://localhost:8081"))
+//				.build();
+//		
+//	}
 
 	
 }
